@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>kilvap.github.io</title>
+
+        <style>
+            :root {
+                --bg-color: #312e2b;
+                --tile-color: #7fa650;
+            }
+
+            html, body {
+                height: 100%;
+            }
+
+            body {
+                background-color: var(--bg-color);
+            }
+
+            .col {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .row {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            .main {
+                height: 100%;
+            }
+
+            .tile {
+                margin: 16px;
+            }
+
+            .content {
+                display: flex;
+                flex-direction: column;
+
+                height: 128px;
+                border-radius: 12px;
+                overflow: hidden;
+
+                margin-bottom: 8px;
+                background-color: var(--tile-color);
+
+                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            }
+
+            @keyframes animate {
+                from { box-shadow: 0 4px 8px 0 rgba(0,0,0,0.7); transform: scale(1); }
+                to { box-shadow: 0 12px 24px 0 rgba(0,0,0,0.85); transform: scale(1.15); }
+            }
+
+            .content:hover {
+                animation: animate 1.0s forwards;
+            }
+
+            .banner {
+                display: flex;
+                flex-direction: row;
+                flex: 4;
+            }
+
+            .options {
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+
+                justify-content: center;
+                text-align: center;
+            }
+
+            
+        </style>
+    </head>
+
+    <body>
+        <div class="main col">
+            <div class="row">
+                
+                <!-- Tile HTML -->
+                <div class="tile col">
+                    <div class="content"> 
+                        <a href="https://kilvap.github.io/chess" class="banner">
+                            <img width="128" height="128" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Chess_nlt45.svg/1024px-Chess_nlt45.svg.png"> </img> 
+                        </a>
+                    </div>
+                </div>
+                <!-- Tile HTML END -->
+
+            </div>
+        </div>
+    </body>
+
+</html>
