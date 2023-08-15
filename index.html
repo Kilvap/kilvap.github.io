@@ -7,8 +7,15 @@
         <style>
             :root {
                 --bg-color: #312e2b;
-                --tile-color: #7fa650;
+                --chess-square-color: #7fa650;
+                --mines-cell-color: rgba(189, 189, 189, 1);
                 --gray-color: #d0d9cd;
+            }
+
+            @font-face {
+                font-family: "Clear Sans";
+                src: url(./ClearSans-Regular.woff);
+                
             }
 
             html, body {
@@ -23,13 +30,11 @@
             .col {
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
             }
 
             .row {
                 display: flex;
                 flex-direction: row;
-                justify-content: center;
             }
 
             .main {
@@ -46,12 +51,30 @@
             .content {
                 display: flex;
                 flex-direction: column;
+            }
 
+            .icon {
                 border-radius: 12px;
                 overflow: hidden;
-                background-color: var(--tile-color);
+            }
 
-                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            .chess {
+                background-color: var(--chess-square-color);
+            }
+
+            .mines {
+                background-color: var(--mines-cell-color);
+            }
+
+            .title {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+
+                color: white;
+                font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+                font-weight: bold;
+                font-size: 14px;
             }
 
             .empty {
@@ -68,11 +91,11 @@
             }
 
             @keyframes animate {
-                from { box-shadow: 0 4px 8px 0 rgba(0,0,0,0.7); transform: scale(1); }
-                to { box-shadow: 0 12px 24px 0 rgba(0,0,0,0.85); transform: scale(1.1); }
+                from { transform: scale(1); }
+                to { transform: scale(1.1); }
             }
 
-            .content:hover {
+            .icon:hover {
                 animation: animate 0.5s forwards;
             }
 
@@ -99,16 +122,30 @@
                 <!-- Tile HTML -->
                 <div class="tile col">
                     <div class="content"> 
-                        <a href="https://kilvap.github.io/chess" class="banner">
-                            <img width="64" height="64" src="https://kilvap.github.io/chess/pieces/set2/white-knight.svg" alt="chess"> </img> 
-                        </a>
+                        <div class="icon chess">
+                            <a href="https://kilvap.github.io/chess" class="banner">
+                                <img width="64" height="64" src="https://kilvap.github.io/chess/pieces/set2/white-knight.svg" alt="chess"> </img> 
+                            </a>
+                        </div>
+                        <div class="title">
+                            Chess
+                        </div>
                     </div>
                 </div>
                 <!-- Tile HTML END -->
 
                 <!-- Placeholder Tiles -->
                 <div class="tile col">
-                    <div class="empty"></div>
+                    <div class="content">
+                        <div class="icon mines"> 
+                            <a href="https://kilvap.github.io/minesweeper" class="banner">
+                                <img width="64" height="64" src="https://kilvap.github.io/minesweeper/logo.png" alt="minesweeper"> </img> 
+                            </a>
+                        </div>
+                        <div class="title">
+                            Mines
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="tile col">
