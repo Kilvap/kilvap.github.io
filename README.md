@@ -4,7 +4,11 @@
 
 # About
 
-Launches other github pages projects
+Launches other github pages projects found below:
 
-[Chess](https://kilvap.github.io/chess)
-[Minesweeper](https://kilvap.github.io/minesweeper)
+[Chess](https://kilvap.github.io/chess) </br>
+[Minesweeper](https://kilvap.github.io/minesweeper) </br>
+
+Built using this [repo](https://github.com/Kilvap/home)
+
+
